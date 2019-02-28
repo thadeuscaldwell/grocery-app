@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-      <div>
+      
+      <div id= "banner">
+        <h1>The Grocery Store App </h1>
+        <div id="mySidenav" className="sidenav">
+            <a href="Login.js" id="login">Login</a>
+            <a href="History.js" id="History">Grocery History</a>
+            <a href="New List.js" id="newList">New List</a>      
+      
+            <img src={require('./Images/store.jpeg')} alt='store'/>
 
-        <div id="mySidenav" class="sidenav">
-            <a href="#" id="login">Login</a>
-            <a href="#" id="groceryList">Grocery List</a>
-            <a href="#" id="newList">New List</a>
-            {/* <a href="#" id="contact">Contact</a> */}
         </div>
-            {/* <img src={require('./Images/store.jpeg')} alt='store'/>   */}
-            <img style={{height:"100%"}} src={require('./Images/grocery.jpg')} alt='store'/>
-
       </div>
          
-    )
+    );
   }
 }
 

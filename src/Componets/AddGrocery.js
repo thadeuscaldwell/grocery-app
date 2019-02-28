@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 class AddGrocery extends Component {
     render() {
         return (
-            <form action="">
-            <input type="text" placeholder="Item"/>
+            <form action="https://grocery-app-backend.herokuapp.com/groceries"method= "POST">
+            <input name="item"type="text" placeholder="Item"/>
             <br/>
-            <input type="text" placeholder= "Value"/>
+            <input  name="value"type="text" placeholder= "Value"/>
             <br/>
             <input type="submit" placeholder= "Submit"/>
 
@@ -15,5 +15,6 @@ class AddGrocery extends Component {
             </form>
         )
     }
+    
 }
 export default AddGrocery
