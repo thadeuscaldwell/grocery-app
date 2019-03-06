@@ -3,18 +3,21 @@ import Header from './Componets/Header'
 import AddGrocery from './Componets/AddGrocery.js'
 import './App.css';
 import $ from 'jquery';
+import GroceryList from './Componets/GroceryList.js'
+
+
 
 
 class App extends Component {
 constructor(props){ //ajax call
 super(props);
 this.state = {
-  groceryList:{}
+  groceryList:[]
   };
 }
 getGroceryList(){
       $.ajax({
-      url:'https://grocery-app-backend.herokuapp.com',
+      url:'https://grocery-app-backend.herokuapp.com/groceries',
       dataType:'json',
       cache: false,
       success: function(data){
@@ -36,10 +39,13 @@ getGroceryList(){
   render() {
 
     return (
-      <div>
+      <div id='wrapper'className='wrapperShow'>
       <Header/>
       <AddGrocery/>
-           </div>
+      <GroceryList data={this.state.GroceryList}/>
+      <div id='getStarted'>
+      </div>
+   </div>
          
     );
   }
