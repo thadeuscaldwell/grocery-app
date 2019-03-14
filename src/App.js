@@ -42,7 +42,7 @@ getGroceryList(){
       <div id='wrapper'className='wrapperShow'>
       <Header/>
       <AddGrocery/>
-      <GroceryList data={this.state.GroceryList}/>
+      <GroceryList data={this.state.groceryList}/>
       <div id='getStarted'>
       </div>
    </div>
